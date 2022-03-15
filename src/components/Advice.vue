@@ -5,14 +5,12 @@
         <p>ADVICE # {{ adviceslip.id }}</p>
       </div>
       <div class="content">
-        <p>
-          {{ adviceslip.advice }}
-        </p>
+        <p>“{{ adviceslip.advice }}”</p>
       </div>
       <div class="divider">
         <img src="../assets/pattern-divider-desktop.svg" alt="" />
       </div>
-      <div class="btn">
+      <div class="btn" @click="handleChange">
         <img src="../assets/icon-dice.svg" alt="" />
       </div>
     </div>
@@ -28,7 +26,11 @@ export default {
 
     loadAdvice();
 
-    return { adviceslip };
+    const handleChange = () => {
+      loadAdvice();
+    };
+
+    return { adviceslip, handleChange };
   },
 };
 </script>
@@ -61,6 +63,10 @@ export default {
   font-size: 14px;
 }
 
+.divider {
+  margin-bottom: 22px;
+}
+
 .divider img {
   width: 80%;
 }
@@ -74,5 +80,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 </style>
