@@ -52,7 +52,7 @@ export default {
 .info {
   max-width: 37vw;
   min-width: 85vw;
-  min-height: 37vh;
+  min-height: 40vh;
   background: hsl(217, 19%, 24%);
   border-radius: 10px;
   display: flex;
@@ -95,7 +95,7 @@ export default {
   box-shadow: 0 0 0.5em 0 rgb(128 0 128 / 50%), 0 0 0.75em 0 hsl(150, 100%, 66%);
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 375px) {
   .info {
     width: 28vw;
     height: 35vh;
